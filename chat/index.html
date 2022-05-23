@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat</title>
+        <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+        <script type="module" src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="signUpForm">
+            <form onsubmit="event.preventDefault(); startChat()">
+                <label>
+                    Name: <input type="text" placeholder="Username" name="name">
+                </label>
+                <br>
+                <input type="submit" value="Start Chat">
+            </form>
+        </div>
+        <div id="chatContainer" class="hidden">
+            <div id="chat">
+            </div>
+            <div id="controls">
+                <form onsubmit="event.preventDefault(); addMessage()">
+                    <textarea id="chatMessage" name="chatMessage" placeholder="Write a message..."></textarea>
+                    <button>
+                        <img src="images/send.svg">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>

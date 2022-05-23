@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div id="btnDiv">
+        <button id="startBtn" onclick="startGame()">Start Game</button>
+    </div>
+    <div id="choosePlayer" class="hidden"> 
+        <p>Please select which player you would like to be:</p>
+        <button onclick="choosePlayer(true)" id="buttonX">I want to be X</button>
+        <button  onclick="choosePlayer(false)" id="button0">I want to be 0</button>
+    </div>
+    <div class="hidden" id="gameContent">
+        <div id="game">
+            <div class="box" onclick="play(0)"></div>
+            <div class="box" onclick="play(1)"></div>
+            <div class="box" onclick="play(2)"></div>
+            <div class="box" onclick="play(3)"></div>
+            <div class="box" onclick="play(4)"></div>
+            <div class="box" onclick="play(5)"></div>
+            <div class="box" onclick="play(6)"></div>
+            <div class="box" onclick="play(7)"></div>
+            <div class="box" onclick="play(8)"></div>
+        </div>
+        <div id="status">
+            <p id="gameMessage">
+                Player "X" is going to be the first one.
+                Player "0" is going to be the second one.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
