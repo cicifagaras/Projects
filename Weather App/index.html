@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <script src="main.js"></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+        <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'>
+        </script>
+        <link rel='stylesheet'
+            href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css'
+            type='text/css' />
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div id="forecastContainer">
+
+            <div id="forecast">
+                <div id="searchArea">
+                    <div id="geocoder"></div>
+                    <button id="searchButton" onclick="todayForecast(event)">Today's forecast</button>
+                    <button id="searchButton" onclick="fiveDayForecast(event)">Five Day forecast</button>
+                </div>
+                <h1>Weather <span>Forecast</span></h1>
+
+                <div id='map'></div>
+                <script>
+                    mapboxgl.accessToken =
+                        'pk.eyJ1IjoiY2ljaWZhZ2FyYXMiLCJhIjoiY2wycm93NHo2MDEzdzNqbXZ1MGJ5MnlldiJ9.oMxOAHal40zcnkJeizf2vA';
+                    const map = new mapboxgl.Map({
+                        container: 'map', // Container ID
+                        style: 'mapbox://styles/mapbox/streets-v11', // Map style to use
+                        center: [24.4891, 47.1393], // Starting position [lng, lat]
+                        zoom: 10, // Starting zoom level
+                    });
+
+                    const marker = new mapboxgl.Marker() // initialize a new marker
+                        .setLngLat([-122.25948, 37.87221]) // Marker [lng, lat] coordinates
+                        .addTo(map); // Add the marker to the map
+
+                    const geocoder = new MapboxGeocoder({
+                        // Initialize the geocoder
+                        accessToken: mapboxgl.accessToken, // Set the access token
+                        mapboxgl: mapboxgl, // Set the mapbox-gl instance
+                        marker: false // Do not use the default marker style
+                    });
+
+                    // Add the geocoder to the map
+                    document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+                </script>
+
+                <div id="forecastPerDays">
+                    <table>
+                        <thead>
+                            <td id="forecastCity"></td>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="todayForecast">
+                <h1 id="today">Today</h1>
+                <div id="firstDescription"></div>
+                <div id="iconDiv"></div>
+                <div id="tempDiv"></div>
+                <div id="secondDescription">
+                    <div id="details" class="hidden">
+                        <p>Minimum temperature</p>
+                        <p>Maximum temperature</p>
+                        <p>Pressure</p>
+                        <p>Humidity</p>
+                    </div>
+                    <div id="receivedData"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

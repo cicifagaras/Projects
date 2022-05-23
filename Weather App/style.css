@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+input[name="searchBar"] {
+    color: grey;
+    font-size: medium;
+    padding-left: 10px;
+    border: 1px solid #F3FBFF;
+    border-radius: 7px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    width: 250px;
+    height: 40px;
+}
+
+input[name="searchBar"]:focus {
+    border: 1px solid #292474;
+}
+
+#searchButton {
+    color: #292474;
+    background-color: white;
+    font-weight: bold;
+    border-color: #292474;
+    border-radius: 7px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+#forecastContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#forecast {
+    padding: 20px;
+    width: 60%;
+    background-color: #F3FBFF;
+    height: fit-content;
+}
+
+#searchArea {
+    display: flex;
+}
+
+#todayForecast {
+    padding: 20px;
+    width: 40%;
+    background-color: #110E3C;
+    color: aliceblue;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+span {
+    font-weight: 900;
+    color: #292474;
+}
+
+#map {
+    border: 3px solid #292474;
+    width: 70%;
+    height: 245px;
+}
+
+table {
+    margin-top: 20px;
+    color: #110E3C;
+}
+
+#forecastCity {
+    font-weight: bolder;
+    font-size: large;
+    color: #292474;
+}
+
+#today {
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#firstDescription {
+    color: rgba(120, 133, 145, 0.521);
+    font-size: large;
+}
+
+#tempDiv {
+    font-size: 50px
+}
+
+#secondDescription {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+
+#details {
+    text-align: start;
+}
+
+#receivedData {
+    text-align: end;
+}
