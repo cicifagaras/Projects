@@ -3,8 +3,9 @@ console.log("main.js loaded...");
 let state = {
     list: [],
     indexEdit: null,
-}
+} //local database
 
+//on page load we call the function that is drawing the table
 window.onload = function drawPage() {};
 
 function drawPage() {

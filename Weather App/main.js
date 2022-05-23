@@ -1,10 +1,10 @@
 console.log("main.js loaded...");
 
-let dataBaseForecast = {};
-let dataBaseDaily = {};
-let urlForecast = "https://api.openweathermap.org/data/2.5/forecast?appid=69518b1f8f16c35f8705550dc4161056&units=metric&q=";
-let urlCurrentWeather = "https://api.openweathermap.org/data/2.5/weather?appid=69518b1f8f16c35f8705550dc4161056&units=metric&q=";
-let urlIcon = "http://openweathermap.org/img/w/";
+let dataBaseForecast = {};  //database for 5 days forecast
+let dataBaseDaily = {};    // database for daily forecast
+let urlForecast = "https://api.openweathermap.org/data/2.5/forecast?appid=69518b1f8f16c35f8705550dc4161056&units=metric&q=";   //5 day forecast api
+let urlCurrentWeather = "https://api.openweathermap.org/data/2.5/weather?appid=69518b1f8f16c35f8705550dc4161056&units=metric&q=";  //daily forecast api
+let urlIcon = "http://openweathermap.org/img/w/";  //weather icon api
 let place;
 let clickedBtn = false;
 
