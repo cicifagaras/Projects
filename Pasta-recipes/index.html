@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recipes</title>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="loading" class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="container">
+            <h1>Pasta Recipes</h1>
+            <input type="text" name="search" oninput="draw()">
+            <button id="ingredientsBtn" onclick="draw()">
+                Cauta in ingrediente
+            </button>
+
+            <button id="contactBtn" onclick="contactPage()">Contact</button>
+
+            <div id="recipes"></div>
+        </div>
+    </body>
+
+</html>
