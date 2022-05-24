@@ -63,7 +63,7 @@ function draw() {
                 dayArray.push(aux1);
             }
         }
-        for (let k = 0; k < dayArray.length; k++) {
+        for (let k = 0; k < 5; k++) {
             days += `
                         <tr class="day${k}">
                             <td>${dayArray[k]}</td>

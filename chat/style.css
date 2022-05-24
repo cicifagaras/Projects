@@ -7,6 +7,26 @@ html,body {
     margin: 0;
 }
 
+#signUpForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    border: 1px solid black;
+    height: 200px;
+    background-color: rgb(187, 223, 166);
+}
+
+#introForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[value="Start Chat"] {
+    width: 100px;
+    background-color: rgb(243, 233, 219);
+}
 
 .hidden {
     display: none !important;
